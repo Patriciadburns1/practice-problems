@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head></head>
+<script type="text/javascript">
+
+    var randomArray = [35, "hello", true, "goodbye", 34, false, "whatUp", 23];
+
+    function sortArray(array) {
+        newArray=[]; 
+        arrayString = [];
+        arrayNumber = [];
+        arrayBoolean = [];
+        for ( var i = 0; i <= array.length; i++) {
+            if (typeof array[i] == "string") {
+                arrayString.push(array[i]);
+            }
+            else if (typeof array[i] == "number") {
+                arrayNumber.push(array[i]);
+            }
+            else if (typeof array[i] == "boolean") {
+                arrayBoolean.push(array[i]);
+            }
+            // arrayString; arrayNumber; arrayBoolean; 
+        }
+       newArray.push(arrayString), 
+       newArray.push(arrayNumber); 
+       newArray.push(arrayBoolean);
+       return newArray; 
+    }
+
+    console.log(sortArray(randomArray)); 
+</script>
+
+<body>
+    <h1> Practice Problems 03 </h1>
+
+</body>
+
+</html>

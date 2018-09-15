@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        Practice Problem 37 
+
+    </body>
+    <script type="text/javascript">
+    
+    function alternateCaps(string){
+    var newString='';
+        for(var stringIndex=0; stringIndex<string.length; stringIndex++){
+        //if even number
+            if(stringIndex%2 === 0 ){
+                var newString= newString + string[stringIndex];         
+            } 
+            else{
+                var newString=newString + string[stringIndex].toUpperCase();
+            }
+         
+        }    
+        console.log(newString); 
+        return newString; 
+    }
+    
+    console.log(alternateCaps("amazing"));  
+    console.log(alternateCaps("bullshit")); 
+    </script>
+    </html>
+    <!-- ## alternate caps
+
+- given a string, create a new string with every other letter capitalized
+- example:
+	- parameters: "amazing"
+	- return: "aMaZiNg"
+
+### human-level instructions
+- create variable to store new string
+- start a loop to proceed through the string
+	- get a new letter from the string
+		- store it in a variable
+	- get the next letter from the string
+		- store it in a variable
+		- capitalize it
+	- add the regular and capitalized letters to the new string
+- repeat -->

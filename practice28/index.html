@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+<title>practice 28</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+
+function romanNumeralConversion(number){
+var numberArray =[{number:1000, numeral:"M"}, {number:500, numeral:"D"},{number:100, numeral:"C", number} ];
+var romanNumeral=["M","D", "C", "L", "X", "V", 'I']
+var x=0;
+var roman='';
+    while(number!==0){
+        for (x=0;x<numberArray.length; x++){
+            if (number>=numberArray[x]){
+
+                number-=numberArray[x].number;
+                roman+=numberArray[x].numeral;
+            }
+        }
+    }
+
+
+}   
+
+var x = 34;
+var y = 50;
+var z = (x % y);
+console.log(z);
+
+
+</script>
+</html>

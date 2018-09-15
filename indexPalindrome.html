@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head></head>
+    <script type="text/javascript">
+        var currentDate= "6/7/18"; 
+
+    function generateWeek(currentDate) {
+        var generatedDateObject = new Date(currentDate);
+        console.log(currentDate); 
+
+    }
+    let test = "6/1/2018"
+​
+    function weekLayout( inputDayStr ){
+      debugger;
+      let weekObj = {};
+      let dayOfWeek = new Date(inputDayStr).getDay();
+​
+      for ( let dayIndex = -dayOfWeek; dayIndex < 7-dayOfWeek; dayIndex++){
+        let nextDay = new Date(inputDayStr); //gets current day
+        nextDay.setDate(nextDay.getDate() + dayIndex); //adds or minus days then gets the adjusted object.
+​
+        let day = nextDay.toString().split(' ')[0]; // pulls the day str
+        let key = day[0]; //sets key by day
+        if (weekObj[key]){
+          key = day.substr(0,2);
+        }
+        weekObj[key] = nextDay.toLocaleDateString();
+      }
+      return weekObj;
+    }
+​
+    let result = weekLayout(test);
+    console.log(result)
+
+
+    // currentDate is result is Thu Jun 07 
+    // //              0       1           2           3           4           5       6
+    // var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // dateObject={
+    //     Sunday:
+    //     Monday:
+    //     Tuesday: 
+    //     Wednesday:
+    //     Thursday: 
+    //     Friday:
+    //     Saturday: 
+    // }
+    
+
+
+    </script>
+    <body>
+    <h1> Palindrome </h1>
+
+    </body>
+</html>
